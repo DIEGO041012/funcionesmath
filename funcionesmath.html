@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>abs(): devuelve el valor absluto de un numero</li>
+        <li>Min(): devuelve el menor de los numeros </li>
+        <li>Max(): devuleve el mayor de los numeros</li>
+        <li>Pow(): devuelve el resultao de la operacion de elevar un numero</li>
+        <li>Random(): devuelve un numero aleatorio entre 0 y 1 (con decimales)</li>
+        <li>sqrt(): devuelve la raiz cuadrada de un numero</li>
+    </ul>
+    <script>
+        //1.abs() Valor absoluto
+        console.log(Math.abs(44))
+        console.log(Math.abs(-44))
+
+
+        //2.el numero menor de todos
+        console.log(Math.min(1,4,5))
+
+        //3. el numero mayor de todos
+        console.log(Math.max(1,4,5))
+
+
+    </script>
+
+    <ul>
+        <li>ceil(): se usa para redondear un numero hacia el siguiente numero entero</li>
+        <li>floor(): redondea un numero hacia el interior de un numero interior</li>
+        <li>round(): redondea el numero hacia atras si el decimal es menor a .5 y hacia adelante si es mayor o igual a .5</li>
+    </ul>
+
+    <script>
+        console.log(Math.ceil(1.4))
+        
+        console.log(Math.floor(1.7))
+        
+        console.log(Math.round(1.6))
+
+        //Modificar el random para que salgan numeros enteros entre 1 y 9
+        console.log(Math.random()*10+1)
+
+
+        console.log(Math.floor(Math.random()*10)+1)
+
+
+    </script>
+    <h3>Funciones callback</h3>
+
+    <p>
+        Una funcion callback es una funcion que pasa a otra funcion como argumento, que luego se invoca dentro de la funcion externa para completar algun tipo de accion
+    </p>
+
+    <script>
+                                                                                                                                                                                    
+        function saludar(nombre)
+        {
+            console.log("Hola "+ nombre);
+
+        }
+        function entradaNombre(callback)
+        {
+            let nombre=prompt("Por favor ingresa tu nombre");
+            callback(nombre);
+        }
+        entradaNombre(saludar) //
+
+        //crear funcion
+        function saludo()
+        {
+            console.log("Hola");
+        }
+
+        //Crear una funcion que acepta otra funcion como parametro
+
+        function hablar(callback2)
+        {
+            callback2();
+        }
+        hablar(saludo);
+
+        //1.creear una funcion que pida la ficha
+
+        function fecha(callback3)
+        {
+            const fecha=prompt("ingrese la fecha actual en formato AAA/MM/DD");
+
+        }
+        //2. crear funcion para obtener los dias restantes
+        function diasfaltantes(fecha)
+
+    </script>
+
+</body>
+</html>
